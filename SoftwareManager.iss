@@ -11,7 +11,7 @@
 ; Иконка
 #define   Icon       "LogoImage.ico"
 ; Ссылка откуда собирать
-#define   AppURL     "E:\ApplicationVladimir\Application\"
+#define   AppURL     "Z:\Program\"
 ; Полное название файла с разширение Net 6 && Net 7
 #define   NetProgram  "windowsdesktop-runtime-7.0.4-win-x64.exe"
 ;------------------------------------------------------------------------------
@@ -21,11 +21,11 @@
 ;------------------------------------------------------------------------------
 ;   Секция запуска после инсталляции
 ;------------------------------------------------------------------------------
-Filename: "{app}\{#NetProgram}"; Flags: postinstall nowait skipifsilent unchecked; StatusMsg: Microsoft Framework 7.0 is installed. Please wait...
+Filename: "{app}\{#NetProgram}"; Flags: postinstall nowait skipifsilent; StatusMsg: Microsoft Framework 7.0 is installed. Please wait...
 [Setup]
 
 ; Уникальный идентификатор приложения
-AppId={
+AppId={{C700623F-013C-49FB-AD74-FB8CB850679A}
 
 ; Прочая информация, отображаемая при установке
 AppName={#Name}
@@ -41,7 +41,7 @@ DefaultDirName={autopf}\{#Name}
 DefaultGroupName={#Name}
 
 ; Каталог, куда будет записан собранный setup и имя исполняемого файла
-OutputDir=E:\Setup\{#Name}-setup
+OutputDir={#AppURL}{#Name}-setup
 OutputBaseFileName={#Name}-setup
 
 ; Файл иконки
@@ -55,7 +55,7 @@ SolidCompression=yes
 ;------------------------------------------------------------------------------
 [Tasks]
 ; Создание иконки на рабочем столе
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: checkedonce
 ;------------------------------------------------------------------------------
 ;   Файлы, которые надо включить в пакет установщика
 ;------------------------------------------------------------------------------
@@ -70,7 +70,7 @@ Source: "{#AppURL}*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs crea
 Source: "{#AppURL}{#Icon}"; DestDir: "{app}"
 
 ; Net подключение
-Source: "{app}\{#NetProgram}"; DestDir: "{app}"
+Source: "{#AppURL}{#NetProgram}"; DestDir: "{app}"
 ;------------------------------------------------------------------------------
 ;   Указываем установщику, где он должен взять иконки
 ;------------------------------------------------------------------------------ 
