@@ -6,14 +6,18 @@
   + Устанавливаем [inno setup](https://jrsoftware.org/download.php/is.exe)
   
   + Устанавливаем [Net 6](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.15-windows-x64-installer) или [Net 7](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-7.0.4-windows-x64-installer) в зависимости на какой версии написанно ваше приложение (Если не знаете посмотрите [__третий шаг__](#stepThree)) [[Все версии NET](https://dotnet.microsoft.com/en-us/download/dotnet)]
-
+  
 <a name="stepOne">__Шаг первый:__</a>
   
   &ensp;Скачиваете проект
   
+  Если не знаете нажимаете __Code__ , после Download ZIP
+  
+  ![изображение](https://user-images.githubusercontent.com/81241072/229259574-fab2ee35-dde1-4ab9-83ca-37cbd4bc88ce.png)
+  
   ![изображение](https://user-images.githubusercontent.com/81241072/229248216-4fe9572f-b772-45cb-84bf-8c14e9c7910e.png)
-
-  &ensp;Создаете произвольную папку, где вам удобнее (**Диски без разницы**)
+  
+  &ensp;Запускаем файл __Setup.iss__
 
 <a name="stepTwo">__Шаг второй:__</a>
   
@@ -41,6 +45,8 @@
   
   ![изображение](https://user-images.githubusercontent.com/81241072/229249682-7fce54f6-96dd-46f6-b65d-aec786357b4d.png)
 
+  &ensp;Создаете произвольную папку, где вам удобнее (**Диски без разницы**)
+  
   &ensp;Копируем файлы и переносим в подготовленную папку
 
 <a name="stepFour">__Шаг четвертый:__</a>
