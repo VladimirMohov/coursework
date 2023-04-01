@@ -1,23 +1,27 @@
 # COURSEWORK
-Сейчас я покажу вам как же создать установщик из приложения основанного на Net 6 or Net 7
+Сейчас я покажу вам как же создать установщик из приложения основанного на __Net 8__, __Net 6__, __Net 7__ или более старых версиях
 
-__Шаг нулевой:__
+<a name="stepZero">__Шаг нулевой:__</a>
 
   + Устанавливаем [inno setup](https://jrsoftware.org/download.php/is.exe)
   
-  + Устанавливаем [Net 6](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.15-windows-x64-installer) или [Net 7](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-7.0.4-windows-x64-installer) в зависимости на какой версии написанно ваше приложение (Если не знаете посмотрите третий шаг)
+  + Устанавливаем [Net 6](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.15-windows-x64-installer) или [Net 7](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-7.0.4-windows-x64-installer) в зависимости на какой версии написанно ваше приложение (Если не знаете посмотрите [__третий шаг__](#stepThree)) [[Все версии NET](https://dotnet.microsoft.com/en-us/download/dotnet)]
 
-__Шаг первый:__
+<a name="stepOne">__Шаг первый:__</a>
   
   &ensp;Скачиваете проект
   
   ![изображение](https://user-images.githubusercontent.com/81241072/229248216-4fe9572f-b772-45cb-84bf-8c14e9c7910e.png)
 
-__Шаг второй:__
+  &ensp;Создаете произвольную папку, где вам удобнее (**Диски без разницы**)
+
+<a name="stepTwo">__Шаг второй:__</a>
   
-  &ensp;Создаете произвольную папку;
+  &ensp;Открваем Visual Studio с нашим проектом
   
-  &ensp;Изменяте строку подключения из \\SQLEXPRESS в . (Либо в App.xaml, либо в вашем контексте)
+  &ensp;Измените строку подключения из "\\SQLEXPRESS" в "." (Либо в App.xaml, либо в вашем контексте)
+  
+  Получается вот так:
   
   `"Server=.;Database=Software;Trusted_Connection=True;TrustServerCertificate=True;"`
   
@@ -27,7 +31,7 @@ __Шаг второй:__
   
   &ensp;Главное что-бы собрал без ошибок
 
-__Шаг третий:__
+<a name="stepThree">__Шаг третий:__</a>
   
   &ensp;Откройте собранный проект (папка Debug или Release) __Правый клик по проекту и открыть в проводнике или "Open Folder in File Explorer"__
   
@@ -39,23 +43,23 @@ __Шаг третий:__
 
   &ensp;Копируем файлы и переносим в подготовленную папку
 
-__Шаг четвертый:__
+<a name="stepFour">__Шаг четвертый:__</a>
   
-  &ensp;В папку которую вы подготовили вам нужно добавить файлы иконки и файл net либо net7 или net6 в зависимости от вашей
+  &ensp;В папку которую вы подготовили вам нужно добавить файлы иконки и файл net, либо __net7__ или __net6__ ([Шаг первый](#stepOne)) в зависимости от вашей
   
-  &ensp;Иконка должна иметь формат **.ico**
+  &ensp;Иконка должна иметь формат **.ico** ([Сайт с иконками](https://icon-icons.com/))
 
-__Шаг пятый:__
+<a name="stepFive">__Шаг пятый:__</a>
 
-  `#define   Name       "SoftwareManager"` - Изменяем "SoftwareManager" на название вашей программы
+  `#define   Name       "SoftwareManager"` - Изменяем __SoftwareManager__ на название вашей программы
   
-  `#define   ExeName    "Software1.3V.exe"` - Изменяем "Software1.3V.exe" на полный ваш исполняемый файл
+  `#define   ExeName    "Software1.3V.exe"` - Изменяем __Software1.3V.exe__ на полный ваш исполняемый файл
   
-  `#define   Icon       "LogoImage.ico"` - Изменяем "LogoImage.ico" на название вашего ico файла иконки
+  `#define   Icon       "LogoImage.ico"` - Изменяем __LogoImage.ico__ на название вашего ico файла иконки
   
-  `#define   AppURL     "E:\ApplicationVladimir\Application\"` - Изменяем "E:\ApplicationVladimir\Application\" на путь к вашему проекту с исполняемым файлом
+  `#define   AppURL     "E:\ApplicationVladimir\Application\"` - Изменяем __E:\ApplicationVladimir\Application\\__  __(не забудте закрыть путь - \\)__ на путь к вашему проекту с исполняемым файлом
   
-  `#define   NetProgram  "windowsdesktop-runtime-7.0.4-win-x64.exe"` - Выбираем либо "windowsdesktop-runtime-7.0.4-win-x64.exe" или "windowsdesktop-runtime-6.0.15-win-x64.exe", в зависимости Net 6 или Net 7
+  `#define   NetProgram  "windowsdesktop-runtime-7.0.4-win-x64.exe"` - Выбираем либо __windowsdesktop-runtime-7.0.4-win-x64.exe__ или __windowsdesktop-runtime-6.0.15-win-x64.exe__, в зависимости Net 6 или Net 7 ([Пример имён](#stepOne) и [Установка NET](#stepZero))
   
   ![изображение](https://user-images.githubusercontent.com/81241072/229251347-47359d60-fae8-419e-8449-c186bef6ebfa.png)
   
@@ -73,7 +77,7 @@ __Шаг пятый:__
 
   &ensp;В исходной папке создаться папка Название вашего приложения-setup
   
-__Шаг шестой:__
+<a name="stepSix">__Шаг шестой:__</a>
   
   &ensp;Запускаете установщик и устанавливаете галочку на создание приложения на рабочем столе 
   
