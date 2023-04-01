@@ -1,11 +1,24 @@
 # COURSEWORK
-Сейчас я покажу вам как же создать установщик из приложения основанного на __Net 8__, __Net 6__, __Net 7__ или более старых версиях
+Сейчас я покажу вам как же создать установщик из приложения основанного на __Net 8__, __Net 6__, __Net 7__ или более старых версиях или __NET Framework__
 
 <a name="stepZero">__Шаг нулевой:__</a>
 
   + Устанавливаем [inno setup](https://jrsoftware.org/download.php/is.exe)
   
-  + Устанавливаем [Net 6](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.15-windows-x64-installer) или [Net 7](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-7.0.4-windows-x64-installer) в зависимости на какой версии написанно ваше приложение (Если не знаете посмотрите [__третий шаг__](#stepThree)) [[Все версии NET](https://dotnet.microsoft.com/en-us/download/dotnet)]
+  + Устанавливаем [Net 6](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.15-windows-x64-installer) или [Net 7](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-7.0.4-windows-x64-installer) или [NET Framework](https://dotnet.microsoft.com/en-us/download/dotnet-framework) в зависимости на какой версии написанно ваше приложение (Если не знаете посмотрите [__третий шаг__](#stepThree)) [[Все версии NET](https://dotnet.microsoft.com/en-us/download/dotnet)]
+
+  &ensp;Можно посмотреть версию в App.config (Если __NET Framework__ )
+ 
+  ![изображение](https://user-images.githubusercontent.com/81241072/229306198-b5c5273a-f636-484a-a286-7e96f7e6228c.png)
+
+  &ensp;Можно посмотреть версию через __ваше приложение -> Свойства/Properties__ (Если __Microsoft NET__ )
+  
+  ![изображение](https://user-images.githubusercontent.com/81241072/229306343-516a4f38-09c7-4875-b0b5-ab13bf792b7a.png)
+
+  &ensp;Здесь откроется свойство вашего приложения. Здесь вы увидите версию NET.
+  
+  ![изображение](https://user-images.githubusercontent.com/81241072/229306476-f9c61f88-fb88-491e-ab8f-3b108d87ac67.png)
+  
   
 <a name="stepOne">__Шаг первый:__</a>
   
