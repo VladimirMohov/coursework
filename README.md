@@ -5,7 +5,7 @@
 
   + Устанавливаем [inno setup](https://jrsoftware.org/download.php/is.exe)
   
-  + Устанавливаем [Net 6](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.15-windows-x64-installer) или [Net 7](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-7.0.4-windows-x64-installer) или [NET Framework](https://dotnet.microsoft.com/en-us/download/dotnet-framework) в зависимости на какой версии написанно ваше приложение (Если не знаете посмотрите [__третий шаг__](#stepThree)) [[Все версии NET](https://dotnet.microsoft.com/en-us/download/dotnet)]
+  + Устанавливаем [Net 6](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.15-windows-x64-installer) или [Net 7](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-7.0.4-windows-x64-installer) или [NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer) в зависимости на какой версии написанно ваше приложение (Если не знаете посмотрите [__третий шаг__](#stepThree)) [[Все версии NET](https://dotnet.microsoft.com/en-us/download/dotnet)] [[Все версии NET Framework](https://dotnet.microsoft.com/en-us/download/dotnet-framework)]
 
   &ensp;Можно посмотреть версию в App.config (Если __NET Framework__ )
  
@@ -52,11 +52,13 @@
   
   &ensp;Откройте собранный проект (папка Debug или Release) __Правый клик по проекту и открыть в проводнике или "Open Folder in File Explorer"__
   
-  ![изображение](https://user-images.githubusercontent.com/81241072/229249497-5eb31af8-63fa-421a-8044-8db7cb195753.png)
+  ![изображение](https://user-images.githubusercontent.com/81241072/229726673-6177d739-c709-4ef2-b48f-2d3df24e607c.png)
   
-  &ensp;После откроется проводник с проект переходим в папки bin -> Debug или Release (в зависимости куда собрали) -> net7.0-windows или net6.0-windows
+  &ensp;После откроется проводник с проект переходим в папки bin -> Debug или Release (в зависимости куда собрали)
   
-  ![изображение](https://user-images.githubusercontent.com/81241072/229249682-7fce54f6-96dd-46f6-b65d-aec786357b4d.png)
+  &ensp;Там хранятся наши вайлы, и исполняемый файл __.exe__. (__ФАЙЛЫ МОГУТ ОТЛИЧАТСЯ__)
+  
+  ![изображение](https://user-images.githubusercontent.com/81241072/229727623-892f413f-e216-499a-84a1-830ed1e35262.png)
 
   &ensp;Создаете произвольную папку, где вам удобнее (**Диски без разницы**)
   
@@ -64,7 +66,7 @@
 
 <a name="stepFour">__Шаг четвертый:__</a>
   
-  &ensp;В папку которую вы подготовили вам нужно добавить файлы иконки и файл net, либо __net7__ или __net6__ ([Шаг первый](#stepOne)) в зависимости от вашей
+  &ensp;В папку которую вы подготовили вам нужно добавить файлы иконки и файл net, либо __net7__ или __net6__ или __NET Framework 4.8__ ([Шаг первый](#stepZero)) в зависимости от вашей версии
   
   &ensp;Иконка должна иметь формат **.ico** ([Сайт с иконками](https://icon-icons.com/))
 
@@ -73,12 +75,22 @@
   `#define   Name       "SoftwareManager"` - Изменяем __SoftwareManager__ на название вашей программы
   
   `#define   ExeName    "Software1.3V.exe"` - Изменяем __Software1.3V.exe__ на полный ваш исполняемый файл
+
+  ![изображение](https://user-images.githubusercontent.com/81241072/229721721-2b9a851f-0e07-495c-987e-383612e68bbf.png)
   
   `#define   Icon       "LogoImage.ico"` - Изменяем __LogoImage.ico__ на название вашего ico файла иконки
   
-  `#define   AppURL     "E:\ApplicationVladimir\Application\"` - Изменяем __E:\ApplicationVladimir\Application\\__  __(не забудте закрыть путь - \\)__ на путь к вашему проекту с исполняемым файлом
+  ![изображение](https://user-images.githubusercontent.com/81241072/229724811-aa1fd080-b276-4a7e-bd5b-3ce75d6cd360.png)
+  
+  `#define   AppURL     "Z:\\Program\\"` - Изменяем __Z:\\Program\\__  __(не забудте закрыть путь - \\)__ на путь к вашей произвольной папке с иконкой, Net и проектом
   
   `#define   NetProgram  "windowsdesktop-runtime-7.0.4-win-x64.exe"` - Выбираем либо __windowsdesktop-runtime-7.0.4-win-x64.exe__ или __windowsdesktop-runtime-6.0.15-win-x64.exe__, в зависимости Net 6 или Net 7 ([Пример имён](#stepOne) и [Установка NET](#stepZero))
+  
+  Пример с Net 5:
+  ![изображение](https://user-images.githubusercontent.com/81241072/229724199-fd7a224b-c055-4ae5-bde8-a8b5b504cc6f.png)
+
+  
+  &ensp;Ищем строку AppId={
   
   ![изображение](https://user-images.githubusercontent.com/81241072/229251347-47359d60-fae8-419e-8449-c186bef6ebfa.png)
   
